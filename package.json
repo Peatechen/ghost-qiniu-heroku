@@ -12,6 +12,9 @@
   "dependencies": {
     "ghost": "^0.7.0",
     "qn": "",
+    "fs-extra": "",
+    "bluebird": "",
+    "moment": "",
     "pg": "latest"
   },
   "engines": {

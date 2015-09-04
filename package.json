@@ -1,0 +1,24 @@
+{
+  "name": "ghost-qiniu-heroku",
+  "description": "Just a blogging platform on Heroku.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cobyism/ghost-on-heroku.git"
+  },
+  "bugs": "https://github.com/TryGhost/Ghost/issues",
+  "private": true,
+  "version": "0.7.0",
+  "dependencies": {
+    "ghost": "",
+    "qn": "",
+    "pg": "latest"
+  },
+  "engines": {
+    "node": "~0.10.0 || ~0.12.0",
+    "iojs": "~1.2.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

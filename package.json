@@ -10,7 +10,7 @@
   "private": true,
   "version": "0.7.0",
   "dependencies": {
-    "ghost": "",
+    "ghost": "^0.7.0",
     "qn": "",
     "pg": "latest"
   },

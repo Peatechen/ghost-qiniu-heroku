@@ -1,6 +1,3 @@
-[submodule "content/storage/qn-store"]
-	path = content/storage/qn-store
-	url = https://github.com/minwe/qn-store.git
 [submodule "content/themes/casper"]
 	path = content/themes/casper
 	url = https://github.com/TryGhost/Casper.git

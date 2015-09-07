@@ -20,7 +20,7 @@ if (!!process.env.QINIU_BUCKET_NAME) {
       accessKey: process.env.QINIU_ACCESS_KEY,
       secretKey: process.env.QINIU_SECRET_KEY,
       bucket: process.env.QINIU_BUCKET_NAME,
-      domain: 'http://' + process.env.QINIU_BUCKET_NAME + '.qiniudn.com',
+      domain: process.env.QINIU_DOMAIN,
       // timeout: 3600000, // default rpc timeout: one hour, optional
       // if your app outside of China, please set `uploadURL` to `http://up.qiniug.com/`
       uploadURL: 'http://up.qiniu.com/',

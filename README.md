@@ -40,6 +40,8 @@ To configure QINIU file storage, create an QINIU bucket on [QINIU](http://www.qi
 
 - `QINIU_BUCKET_NAME`: **Required if using QINIU uploads**. This is the name you gave to your QINIU bucket.
 
+- `QINIU_DOMAIN`: **Required if using QINIU uploads**. This is the domain name accessible to your QINIU public bucket.
+
 Once your app is up and running with these variables in place, you should be able to upload images via the Ghost interface and they’ll be stored in QINIU. :sparkles:
 
 ### How this works
@@ -48,7 +50,7 @@ This repository is essentially a minimal web application that specifies [Ghost a
 
 ## Problems?
 
-If you have problems using your instance of Ghost, you should check the [official documentation](http://support.ghost.org/) or open an issue on [the official issue tracker](https://github.com/TryGhost/Ghost/issues). If you discover an issue with the deployment process provided by *this repository*, then [open an issue here](https://github.com/cobyism/ghost-on-heroku).
+If you have problems using your instance of Ghost, you should check the [official documentation](http://support.ghost.org/) or open an issue on [the official issue tracker](https://github.com/TryGhost/Ghost/issues). If you discover an issue with the deployment process provided by *this repository*, then [open an issue here](https://github.com/legendtang/ghost-qiniu-heroku).
 
 ## License
 

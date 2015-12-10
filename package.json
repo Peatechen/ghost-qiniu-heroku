@@ -8,18 +8,15 @@
   },
   "bugs": "https://github.com/TryGhost/Ghost/issues",
   "private": true,
-  "version": "0.7",
+  "version": "0.0.3",
   "dependencies": {
     "ghost": "",
-    "qn": "",
-    "fs-extra": "",
-    "bluebird": "",
-    "moment": "",
+    "ghost-qn-store": "",
     "unidecode": "",
     "pg": ""
   },
   "engines": {
-    "node": ""
+    "node": "~4.2.0 || ~0.10.0"
   },
   "scripts": {
     "start": "node server.js"

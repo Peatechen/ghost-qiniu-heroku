@@ -19,7 +19,7 @@
     "pg": ""
   },
   "engines": {
-    "node": "~4.2.0 || ~0.10.0"
+    "node": "^4.2.0 || ~0.10.0"
   },
   "scripts": {
     "postinstall": "ncp node_modules/Casper content/themes/casper && ncp node_modules/Casper-zh content/themes/casper-zh",

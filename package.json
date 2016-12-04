@@ -8,15 +8,14 @@
   },
   "bugs": "https://github.com/TryGhost/Ghost/issues",
   "private": true,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "dependencies": {
-    "ghost": "",
+    "ghost": "^0.11.3",
     "ghost-qn-store": "legendtang/qn-store",
-    "Casper": "TryGhost/Casper",
+    "casper": "TryGhost/Casper",
     "Casper-zh": "ghostchina/Casper-zh",
     "unidecode": "",
-    "ncp": "",
-    "pg": ""
+    "ncp": ""
   },
   "engines": {
     "node": "^6.9.0 || ^4.2.0 || ~0.10.0"

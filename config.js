@@ -1,9 +1,12 @@
 // Ghost Configuration for Heroku
 
-var path = require('path'),
-    config,
-    fileStorage,
-    storage;
+const path = require('path');
+const url = require('url');
+let config;
+let fileStorage;
+let storage;
+
+const DB_URL = url.parse(process.env.JAWSDB_MARIA_URL || '');
 
 if (!!process.env.QINIU_BUCKET_NAME) {
   fileStorage = true
@@ -23,14 +26,17 @@ if (!!process.env.QINIU_BUCKET_NAME) {
       origin: process.env.QINIU_DOMAIN,
       // timeout: 3600000, // default rpc timeout: one hour, optional
       // if your app outside of China, please set `uploadURL` to `http://up.qiniug.com/`
-      uploadURL: 'http://up.qiniu.com/',
+      // uploadURL: 'http://up.qiniu.com/'
 
       // file storage key config [optional]
       // if `fileKey` not set, Qiniu will use `SHA1` of file content as key.
       fileKey: {
+        // use Qiniu hash as file basename, if set, `safeString` will be ignored
+        hashAsBasename: false,
         safeString: true, // use Ghost safaString util to rename filename, e.g. Chinese to Pinyin
         prefix: 'YYYY/MM/', // {String | Function} will be formated by moment.js, using `[]` to escape,
-        suffix: '' // {String | Function} string added before file extname.
+        suffix: '', // {String | Function} string added before file extname.
+        extname: true // keep file's extname
       }
       // take `外面的世界 x.jpg` as example,
       // applied above options, you will get an URL like below after uploaded:
@@ -60,8 +66,14 @@ config = {
     fileStorage: fileStorage,
     storage: storage,
     database: {
-      client: 'postgres',
-      connection: process.env.DATABASE_URL,
+      client: 'mysql',
+      connection: {
+        host     : DB_URL.hostname,
+        user     : DB_URL.auth.split(':')[0],
+        password : DB_URL.auth.split(':')[1],
+        database : DB_URL.path.split('/')[1],
+        charset  : 'utf8'
+      },
       debug: false
     },
     server: {

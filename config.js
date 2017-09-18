@@ -26,7 +26,7 @@ if (!!process.env.QINIU_BUCKET_NAME) {
       origin: process.env.QINIU_DOMAIN,
       // timeout: 3600000, // default rpc timeout: one hour, optional
       // if your app outside of China, please set `uploadURL` to `http://up.qiniug.com/`
-      // uploadURL: 'http://up.qiniu.com/'
+      uploadURL: process.env.QINIU_UPLOAD_URL || 'http://up.qiniug.com',
 
       // file storage key config [optional]
       // if `fileKey` not set, Qiniu will use `SHA1` of file content as key.

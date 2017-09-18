@@ -13,7 +13,6 @@
     "ghost": "",
     "ghost-qn-store": "legendtang/qn-store",
     "casper": "TryGhost/Casper",
-    "unidecode": "",
     "ncp": ""
   },
   "engines": {

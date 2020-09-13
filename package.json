@@ -11,7 +11,7 @@
   "version": "0.0.6",
   "dependencies": {
     "casper": "TryGhost/Casper",
-    "ghost": "^1.7.1",
+    "ghost": "^3.16.1",
     "ghost-qn-store": "legendtang/qn-store",
     "ncp": ""
   },

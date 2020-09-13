@@ -10,9 +10,9 @@
   "private": true,
   "version": "0.0.6",
   "dependencies": {
-    "ghost": "",
-    "ghost-qn-store": "legendtang/qn-store",
     "casper": "TryGhost/Casper",
+    "ghost": "^3.17.1",
+    "ghost-qn-store": "legendtang/qn-store",
     "ncp": ""
   },
   "engines": {
